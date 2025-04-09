@@ -1,0 +1,156 @@
+body {
+    background-color: rgb(10, 50, 50);
+    font-family: "Permanent Marker", cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#gameContainer {
+    text-align: center;
+    background-color: rgb(20, 70, 70);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: rgb(200, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#modeSelection button {
+    background-color: rgb(23, 68, 68);
+    color: rgb(200, 255, 255);
+}
+
+#modeSelection button:hover {
+    background-color: rgb(33, 88, 88);
+    transform: scale(1.05);
+}
+
+#modeSelection button:active {
+    background-color: rgb(43, 108, 108);
+}
+
+#difficultySelection button {
+    background-color: rgb(30, 90, 90);
+    color: rgb(200, 255, 255);
+}
+
+#difficultySelection button:hover {
+    background-color: rgb(40, 110, 110);
+    transform: scale(1.05);
+}
+
+#difficultySelection button:active {
+    background-color: rgb(50, 130, 130);
+}
+
+#restartBtn {
+    background-color: rgb(20, 70, 70);
+    color: rgb(200, 255, 255);
+    font-weight: bold;
+    border: 2px solid rgb(200, 255, 255);
+}
+
+#restartBtn:hover {
+    background-color: rgb(30, 90, 90);
+    transform: scale(1.05);
+}
+
+#restartBtn:active {
+    background-color: rgb(40, 110, 110);
+}
+
+button.selected {
+    background-color: rgb(50, 130, 130);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+#statusText {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: rgb(200, 255, 255);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid rgb(200, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(30, 90, 90);
+    color: rgb(200, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    background-color: rgb(40, 110, 110);
+    transform: scale(1.1);
+}
+
+.cell:active {
+    background-color: rgb(50, 130, 130);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #modeSelection button,
+    #difficultySelection button,
+    #restartBtn {
+        font-size: 0.9rem;
+        height: 45px;
+    }
+
+    .cell {
+        font-size: 1.5rem;
+    }
+
+    #statusText {
+        font-size: 1rem;
+    }
+}
